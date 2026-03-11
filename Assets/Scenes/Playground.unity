@@ -1231,8 +1231,7 @@ MonoBehaviour:
   debugTransform: {fileID: 2211234902209333795}
   pfBulletProjectile: {fileID: 2691308899747175733, guid: f258652d1ea9b4115951ae1132be851c, type: 3}
   spawnBulletPosition: {fileID: 455476148}
-  vfxHitGreen: {fileID: 0}
-  vfxHitRed: {fileID: 0}
+  hasBullet: 1
 --- !u!4 &1762682267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}

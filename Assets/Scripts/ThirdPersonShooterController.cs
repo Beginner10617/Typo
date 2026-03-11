@@ -14,7 +14,8 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private Transform debugTransform;
     [SerializeField] private Transform pfBulletProjectile;
     [SerializeField] private Transform spawnBulletPosition;
-    
+    [SerializeField] private bool hasBullet;
+
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
@@ -58,9 +59,17 @@ public class ThirdPersonShooterController : MonoBehaviour
 
         if (starterAssetsInputs.shoot) {
             // Projectile Shoot
-            Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
-            Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            if(hasBullet) {
+                Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
+                Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+                // hasBullet = false;
+            }
             starterAssetsInputs.shoot = false;
+        
         }
+    }
+
+    public void setHasBullet() {
+        hasBullet = true;
     }
 }
