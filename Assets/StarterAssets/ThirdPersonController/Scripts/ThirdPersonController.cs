@@ -108,6 +108,7 @@ namespace StarterAssets
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
+        private bool _rotateOnMove = true;
 
         private const float _threshold = 0.01f;
 
@@ -375,6 +376,11 @@ namespace StarterAssets
         public void SetSensitivity(float sensitivity)
         {
             MouseSensitivity = sensitivity;
+        }
+
+        public void SetRotateOnMove(bool newRotateOnMove) 
+        {
+            _rotateOnMove = newRotateOnMove;
         }
 
         private void OnFootstep(AnimationEvent animationEvent)
