@@ -963,6 +963,10 @@ PrefabInstance:
       propertyPath: aimVirtualCamera
       value: 
       objectReference: {fileID: 541074122}
+    - target: {fileID: 2855701645744544815, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: pfBulletProjectile
+      value: 
+      objectReference: {fileID: 3666341336303803829, guid: 641b71fff6cf14bc1becb02f1df22c6a, type: 3}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.47011
