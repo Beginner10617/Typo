@@ -373,6 +373,26 @@ namespace StarterAssets
                 GroundedRadius);
         }
 
+        public void OnInteract()
+        {
+            Debug.Log("Interact called on player");
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 5f))
+            {
+                doorOpen door = hit.collider.GetComponent<doorOpen>();
+                if (door != null)
+                {
+                    door.Interact();
+                }
+            }
+            else
+            {
+                Debug.Log("No interactable object in range");
+            }
+        }
+
         public void SetSensitivity(float sensitivity)
         {
             MouseSensitivity = sensitivity;
