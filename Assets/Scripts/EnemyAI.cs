@@ -10,8 +10,9 @@ public class EnemyAI : MonoBehaviour
         Attack,
         Dead
     }
-
+    public float enemySpeed = 1.7f;
     public State currentState;
+
     Animator animator;
     public Transform player;
     bool canReach = false;
@@ -27,10 +28,19 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent agent;
 
     // --- Animation rotation offsets (edit in Inspector) ---
+    [Header("Animation Rotation Offsets")]
     public float idleYawOffset = 0f;
     public float walkYawOffset = 0f;
     public float runYawOffset = 0f;
     public float attackYawOffset = 0f;
+
+
+    [Header("Sounds")]
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip walkSound;
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip deathSound;
+    public float attackHitDelay = 0.35f; // adjust to sync with animation frame
 
     // Helper function
     bool HasPathToPlayer()
@@ -47,6 +57,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentState = State.Idle;
@@ -140,9 +151,15 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position);
         RotateTowardsDirection(agent.steeringTarget - transform.position, walkYawOffset);
         
-        agent.speed = 2f;
+        agent.speed = enemySpeed;
         animator.SetFloat("Speed", 0.6f);
         
+        if(audioSource != null && walkSound != null && !audioSource.isPlaying)
+        {
+            audioSource.clip = walkSound;
+            audioSource.loop = false;
+            audioSource.Play();
+        }
 
         if(distance < attackRange)
         {
@@ -161,7 +178,10 @@ public class EnemyAI : MonoBehaviour
         if(Time.time > lastAttackTime + attackCooldown)
         {
             animator.SetTrigger("Attack");
-            Attack();
+
+            // delay the hit + sound to match animation frame
+            Invoke(nameof(Attack), attackHitDelay);
+
             lastAttackTime = Time.time;
         }
 
@@ -176,14 +196,27 @@ public class EnemyAI : MonoBehaviour
     {
         Debug.Log("Enemy attacks player");
         player.GetComponent<ThirdPersonShooterController>().TakeDamage(damage);
+
+        if(audioSource != null && attackSound != null)
+        {
+            audioSource.clip = attackSound;
+            audioSource.loop = false;
+            audioSource.Play();
+        }
     }
+
 
     public void Die()
     {
         currentState = State.Dead;
 
         agent.isStopped = true;
-
+        if(audioSource != null && deathSound != null)
+        {
+            audioSource.clip = deathSound;
+            audioSource.loop = false;
+            audioSource.Play();
+        }
         animator.SetBool("Dead", true);
 
         Destroy(gameObject, 3f);

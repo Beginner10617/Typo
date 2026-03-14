@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.111362
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -193,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.052269
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -288,6 +289,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1 &234374821
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +405,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234374821}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &314655863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2135358641621423437, guid: f5b445302f0be411db7920a9b628272e, type: 3}
+  m_PrefabInstance: {fileID: 5134477095767168234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e307e0e45af7f4df9a4ef4abea58a573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &328722227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.111362
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1086,7 +1102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.052269
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1171,6 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -1181,6 +1198,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1001 &663301827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1340,6 +1361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -1350,6 +1372,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1001 &674383916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1509,6 +1535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -1519,6 +1546,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1001 &712736123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1605,7 +1636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7448870320040512486, guid: ba2803e9c6fb042a3a1fef68347c23dd, type: 3}
       propertyPath: JumpHeight
-      value: 1.5
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8520462568561026916, guid: ba2803e9c6fb042a3a1fef68347c23dd, type: 3}
       propertyPath: m_Name
@@ -1699,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.111362
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1707,7 +1738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.052269
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1792,6 +1823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -1802,6 +1834,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1 &848107882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,6 +2167,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
+--- !u!114 &965571569 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8837228663185770641, guid: a2826068a88114c60889c454e33ba2e9, type: 3}
+  m_PrefabInstance: {fileID: 6548586955156743252}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e307e0e45af7f4df9a4ef4abea58a573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &988786331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2197,7 +2244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.111362
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2205,7 +2252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.052269
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2290,6 +2337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -2300,60 +2348,15 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
---- !u!1 &1022874429 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-  m_PrefabInstance: {fileID: 2090210371}
-  m_PrefabAsset: {fileID: 0}
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!4 &1022874432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
   m_PrefabInstance: {fileID: 2090210371}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1022874433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022874429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  currentState: 0
-  player: {fileID: 0}
-  damage: 10
-  detectionRange: 12
-  attackRange: 2
-  attackCooldown: 4
-  idleYawOffset: 0
-  walkYawOffset: 92.616
-  runYawOffset: 92.616
-  attackYawOffset: 90
---- !u!195 &1022874434
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022874429}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &1111358366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,6 +2484,10 @@ PrefabInstance:
     - target: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_Name
       value: EnemyPrefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_TagString
@@ -2625,6 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -2635,6 +2643,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1 &1272411934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,6 +3245,10 @@ PrefabInstance:
       value: EnemyPrefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -3375,6 +3391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -3385,6 +3402,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!114 &1626119499 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6386205909731407585, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
@@ -3555,6 +3576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -3565,6 +3587,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1001 &1869521095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3724,6 +3750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -3734,6 +3761,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1 &1885158079
 GameObject:
   m_ObjectHideFlags: 0
@@ -3961,7 +3992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.111362
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3969,7 +4000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.052269
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4054,6 +4085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -4064,6 +4096,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1001 &2019337449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4130,7 +4166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.111362
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4138,7 +4174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.052269
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4223,6 +4259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -4233,6 +4270,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1001 &2036785964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4299,7 +4340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.111362
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4307,7 +4348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.052269
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4392,6 +4433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36773f5d15d7f45de83ea6f6002cf70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemySpeed: 3.5
   currentState: 0
   player: {fileID: 0}
   damage: 10
@@ -4402,6 +4444,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
+  walkSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  attackHitDelay: 0.35
 --- !u!1001 &2040626620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4651,61 +4697,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 426179029}
     m_Modifications:
-    - target: {fileID: 751976860945388049, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8804368b05c154faba03d8d8424885bd, type: 2}
     - target: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_Name
       value: EnemyPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967408728562412589, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967408728562412589, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967408728562412589, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967408728562412589, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967408728562412589, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967408728562412589, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577423096320592230, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577423096320592230, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.4999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577423096320592230, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577423096320592230, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.4999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577423096320592230, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+    - target: {fileID: 5686697180618676887, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
+      propertyPath: attackHitDelay
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 6436455342348528310, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4750,13 +4748,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1022874433}
-    - targetCorrespondingSourceObject: {fileID: 1681280334897945905, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1022874434}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2f781b2d40bf4473bb28895ed590ef5, type: 3}
 --- !u!1001 &1611041558491941284
 PrefabInstance:
@@ -4832,6 +4824,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1402481088}
     - target: {fileID: 2135358641621423437, guid: f5b445302f0be411db7920a9b628272e, type: 3}
+      propertyPath: doorBoundary
+      value: 
+      objectReference: {fileID: 918787661}
+    - target: {fileID: 4273222672507349291, guid: f5b445302f0be411db7920a9b628272e, type: 3}
+      propertyPath: otherDoor
+      value: 
+      objectReference: {fileID: 314655863}
+    - target: {fileID: 4273222672507349291, guid: f5b445302f0be411db7920a9b628272e, type: 3}
       propertyPath: doorBoundary
       value: 
       objectReference: {fileID: 918787661}
@@ -4932,6 +4932,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6512586928372450469, guid: a2826068a88114c60889c454e33ba2e9, type: 3}
+      propertyPath: otherDoor
+      value: 
+      objectReference: {fileID: 965571569}
+    - target: {fileID: 6512586928372450469, guid: a2826068a88114c60889c454e33ba2e9, type: 3}
+      propertyPath: doorBoundary
+      value: 
+      objectReference: {fileID: 1960887060}
     - target: {fileID: 8837228663185770641, guid: a2826068a88114c60889c454e33ba2e9, type: 3}
       propertyPath: otherDoor
       value: 
