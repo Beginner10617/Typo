@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using StarterAssets;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ThirdPersonShooterController : MonoBehaviour
 {   
@@ -16,6 +17,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private Transform spawnBulletPosition;
     [SerializeField] private bool hasBullet;
     [SerializeField] private GameObject crosshairimage;
+    [SerializeField] private Slider healthBarSlider;
     private int health = 100;
     private AudioSource shootingAudioSource;
     private ThirdPersonController thirdPersonController;
@@ -35,7 +37,8 @@ public class ThirdPersonShooterController : MonoBehaviour
     private void Update()
     {
         Vector3 mouseWorldPosition = Vector3.zero;
-
+        if(healthBarSlider != null)
+            healthBarSlider.value = health;
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         Transform hitTransform = null;

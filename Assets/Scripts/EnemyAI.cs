@@ -69,7 +69,7 @@ public class EnemyAI : MonoBehaviour
             return;
 
         float distance = Vector3.Distance(transform.position, player.position);
-        Debug.Log("Enemy State: " + currentState + " | Distance to Player: " + distance.ToString("F2") + " | Can Reach: " + canReach);
+        // Debug.Log("Enemy State: " + currentState + " | Distance to Player: " + distance.ToString("F2") + " | Can Reach: " + canReach);
         switch(currentState)
         {
             case State.Idle:
