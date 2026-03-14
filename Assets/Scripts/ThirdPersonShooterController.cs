@@ -18,6 +18,9 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private bool hasBullet;
     [SerializeField] private GameObject crosshairimage;
     [SerializeField] private Slider healthBarSlider;
+    [SerializeField] private AudioClip shootAudioClip;
+    [SerializeField] private AudioClip reloadAudioClip;
+
     private int health = 100;
     private AudioSource shootingAudioSource;
     private ThirdPersonController thirdPersonController;
@@ -78,8 +81,9 @@ public class ThirdPersonShooterController : MonoBehaviour
             if(hasBullet && isAiming) {
                 Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
                 Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-                if(shootingAudioSource != null)
-                    shootingAudioSource.Play();
+                if(shootingAudioSource != null && shootAudioClip != null){
+                    shootingAudioSource.PlayOneShot(shootAudioClip);
+                }
                 hasBullet = false;
             }
             starterAssetsInputs.shoot = false;
@@ -89,6 +93,9 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     public void setHasBullet() {
         hasBullet = true;
+        if(reloadAudioClip != null && shootingAudioSource != null){
+            shootingAudioSource.PlayOneShot(reloadAudioClip);
+        }
     }
     public void TakeDamage(int damage) {
         health -= damage;

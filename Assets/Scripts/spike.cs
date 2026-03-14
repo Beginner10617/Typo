@@ -6,6 +6,7 @@ public class spike : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            other.GetComponent<ThirdPersonShooterController>().TakeDamage(100);
             Debug.Log("Player hit spike!");
             Debug.Log("Game Over!");
         }
