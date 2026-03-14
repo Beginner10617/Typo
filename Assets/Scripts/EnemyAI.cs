@@ -69,7 +69,7 @@ public class EnemyAI : MonoBehaviour
             return;
 
         float distance = Vector3.Distance(transform.position, player.position);
-
+        Debug.Log("Enemy State: " + currentState + " | Distance to Player: " + distance.ToString("F2") + " | Can Reach: " + canReach);
         switch(currentState)
         {
             case State.Idle:
@@ -99,13 +99,26 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    void RotateTowardsDirection(Vector3 direction, float yawOffset)
+    {
+        direction.y = 0;
+
+        if(direction.sqrMagnitude < 0.001f)
+            return;
+
+        Quaternion targetRot = Quaternion.LookRotation(direction.normalized);
+        targetRot *= Quaternion.Euler(0, yawOffset, 0);
+
+        transform.rotation = targetRot;
+    }
+
     void IdleState(float distance)
     {
         agent.isStopped = true;
 
         animator.SetFloat("Speed", 0f);
 
-        RotateTowardsPlayer(idleYawOffset);
+        RotateTowardsDirection(player.position - transform.position, idleYawOffset);
 
         if(distance < detectionRange)
         {
@@ -118,26 +131,18 @@ public class EnemyAI : MonoBehaviour
         if(!canReach)
         {
             agent.isStopped = true;
-            animator.SetFloat("Speed", 0.3f);
+            animator.SetFloat("Speed", 0f);
             RotateTowardsPlayer(idleYawOffset);
             return;
         }
 
         agent.isStopped = false;
         agent.SetDestination(player.position);
-
-        if(distance < 8f)
-        {
-            agent.speed = 0f;
-            animator.SetFloat("Speed", 1f);
-            RotateTowardsPlayer(runYawOffset);
-        }
-        else
-        {
-            agent.speed = 0f;
-            animator.SetFloat("Speed", 0.5f);
-            RotateTowardsPlayer(walkYawOffset);
-        }
+        RotateTowardsDirection(agent.steeringTarget - transform.position, walkYawOffset);
+        
+        agent.speed = 2f;
+        animator.SetFloat("Speed", 0.6f);
+        
 
         if(distance < attackRange)
         {
@@ -163,6 +168,7 @@ public class EnemyAI : MonoBehaviour
         if(distance > attackRange)
         {
             currentState = State.Chase;
+            animator.ResetTrigger("Attack");
         }
     }
 
