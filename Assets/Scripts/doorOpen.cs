@@ -5,7 +5,8 @@ public class doorOpen : MonoBehaviour
 {
     public Transform openPosition;     // Destination position
     public float openSpeed = 2f;
-
+    [SerializeField] private doorOpen otherDoor; // Reference to the other door
+    [SerializeField] private GameObject doorBoundary;
     [SerializeField] private bool playerInRange = false;
     private bool isOpening = false;
 
@@ -28,11 +29,24 @@ public class doorOpen : MonoBehaviour
     {
         Debug.Log("Interact called on door");
         if (playerInRange && !isOpening)
+        Open();
+        
+        if(otherDoor != null)
         {
-            isOpening = true;
+            otherDoor.Open();
+        }
+    }
 
-            if (audioSource != null)
-                audioSource.Play();
+    public void Open()
+    {
+        isOpening = true;
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+        if (doorBoundary != null)
+        {
+            doorBoundary.SetActive(false);
         }
     }
 
