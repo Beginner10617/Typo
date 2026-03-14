@@ -93,8 +93,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: ae472ff645a354b78998700268849a51, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 5e68ce8ad0d8e42828584a78362f8a1c, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2073,6 +2073,22 @@ PrefabInstance:
     - target: {fileID: 1895764805724409490, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
       propertyPath: m_Name
       value: User-Interface
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155668465128396503, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155668465128396503, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
+      propertyPath: m_Color.b
+      value: 0.017577427
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155668465128396503, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.017577427
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155668465128396503, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 4409199713336427764, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
       propertyPath: m_Pivot.x
