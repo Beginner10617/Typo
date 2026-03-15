@@ -3,7 +3,7 @@
 Recall is a small 3D action prototype developed for the game jam theme "Only One"  
 The game revolves around a simple mechanic: the player only has **one energy bullet**, which must be retrieved and reused after every shot.
 
-The game takes place inside a controlled robotics testing facility composed of several training chambers. The player must use positioning, timing, and ricochet shots to eliminate hostile drones and progress through the chambers.
+The game takes place inside a controlled robotics testing facility composed of several training chambers. The player must use positioning, timing, and ricochet shots to eliminate hostile robots and progress through the chambers.
 
 ---
 
