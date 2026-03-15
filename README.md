@@ -52,9 +52,9 @@ Players must use spatial awareness and movement to recover the bullet while avoi
 
 ---
 
-## Use of Trip-AI
+## Use of Tripo-AI
 
-Following assets in the game were created using TripAI:
+Following assets in the game were created using TripoAI:
 - Player character `Assets/Character/*`
 - Spikes/Trap `Assets/Prefab/Spike+Trap/*`
 - Enemy character `Assets/Enemyrobot/*`
