@@ -2580,6 +2580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: User-Interface
       objectReference: {fileID: 0}
+    - target: {fileID: 1895764805724409490, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4409199713336427764, guid: 92071e7e478d046fe940a87e49d674fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
