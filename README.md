@@ -11,9 +11,9 @@ The game takes place inside a controlled robotics testing facility composed of s
 
 You are a test subject inside a robotics research facility.
 
-Your weapon fires a single experimental kinetic round that must be retrieved after every shot. The testing environment is guarded by autonomous combat drones designed to evaluate the effectiveness of the prototype weapon.
+Your weapon fires a single experimental kinetic round that must be retrieved after every shot. The testing environment is guarded by autonomous combat robots designed to evaluate the effectiveness of the prototype weapon.
 
-Complete the chambers, defeat the drones, and prove the weapon system is viable.
+Complete the chambers, defeat the robots, and prove the weapon system is viable.
 
 ---
 
