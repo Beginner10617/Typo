@@ -47,6 +47,8 @@ public class ThirdPersonShooterController : MonoBehaviour
             if(successScreen != null)
                 successScreen.SetActive(true);
             Time.timeScale = 0f; // Pause the game
+            Cursor.lockState = CursorLockMode.None; // Unlock the cursor
+            Cursor.visible = true; // Make the cursor visible
         }
         if (!capturedCursor) {
             Cursor.lockState = CursorLockMode.Locked;
@@ -122,5 +124,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         if(failureScreen != null)
             failureScreen.SetActive(true);
         Time.timeScale = 0f; // Pause the game
+        Cursor.lockState = CursorLockMode.None; // Unlock the cursor
+        Cursor.visible = true; // Make the cursor visible
     }
 }
