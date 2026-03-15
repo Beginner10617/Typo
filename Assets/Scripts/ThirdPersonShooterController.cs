@@ -20,6 +20,9 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private Slider healthBarSlider;
     [SerializeField] private AudioClip shootAudioClip;
     [SerializeField] private AudioClip reloadAudioClip;
+    [SerializeField] private GameObject failureScreen;
+    [SerializeField] private GameObject successScreen;
+    [SerializeField] private GameObject allEnemies;
 
     private int health = 100;
     private AudioSource shootingAudioSource;
@@ -40,6 +43,11 @@ public class ThirdPersonShooterController : MonoBehaviour
     }
     private void Update()
     {
+        if(allEnemies != null && allEnemies.transform.childCount == 0) {
+            if(successScreen != null)
+                successScreen.SetActive(true);
+            Time.timeScale = 0f; // Pause the game
+        }
         if (!capturedCursor) {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -111,6 +119,8 @@ public class ThirdPersonShooterController : MonoBehaviour
     }
     private void Die() {
         Debug.Log("Player died!");
-        // Implement death behavior (e.g., respawn, game over screen)
+        if(failureScreen != null)
+            failureScreen.SetActive(true);
+        Time.timeScale = 0f; // Pause the game
     }
 }

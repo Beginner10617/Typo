@@ -53,4 +53,10 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit(); // Quit the application
     }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f; // Ensure the game is not paused when restarting the level
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name); // Reload the current scene
+    }
 }
