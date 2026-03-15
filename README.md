@@ -38,6 +38,7 @@ Players must use spatial awareness and movement to recover the bullet while avoi
 | Jump | Space |
 | Aim / Concentrate Energy | Hold Right Mouse Button |
 | Shoot | Left Mouse Button |
+| Interact (with Door) | E |
 
 ---
 
