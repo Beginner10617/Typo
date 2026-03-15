@@ -27,6 +27,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
     private bool isAiming;
+    private bool capturedCursor = false;
     private void Awake()
     {
         shootingAudioSource = GetComponent<AudioSource>();
@@ -39,6 +40,11 @@ public class ThirdPersonShooterController : MonoBehaviour
     }
     private void Update()
     {
+        if (!capturedCursor) {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            capturedCursor = true;
+        }
         Vector3 mouseWorldPosition = Vector3.zero;
         if(healthBarSlider != null)
             healthBarSlider.value = health;
