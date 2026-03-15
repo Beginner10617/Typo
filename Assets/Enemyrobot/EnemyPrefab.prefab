@@ -235,9 +235,10 @@ MonoBehaviour:
   walkYawOffset: 92.616
   runYawOffset: 92.616
   attackYawOffset: 90
-  walkSound: {fileID: 8300000, guid: 1135a2c58a8b94023ba49e843b7c58f0, type: 3}
+  walkSound: {fileID: 8300000, guid: 7cd52ad0ddaf84b45889468b7435f97b, type: 3}
   attackSound: {fileID: 8300000, guid: 4ae21b7c4e60846b2862de6ad544b3f4, type: 3}
   deathSound: {fileID: 8300000, guid: 37dca739ebd074765a1703421d0b26a1, type: 3}
+  attackHitDelay: 0.35
 --- !u!195 &3021442336182963447
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -273,7 +274,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.924
   m_Pitch: 1
   Loop: 0
   Mute: 0
